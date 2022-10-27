@@ -38,3 +38,5 @@ then the leading dimension is set to the row dimension of matrix X.
 #define LDA 1000
 #define LDB 1000
 #define LDC 1000
+
+#define DEBUG_ON 0

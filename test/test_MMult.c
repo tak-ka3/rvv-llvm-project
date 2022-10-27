@@ -29,8 +29,12 @@ int main()
     *a, *b, *c, *cref, *cold;    
   
   printf( "MY_MMult = [\n" );
-    
+  
+  # if DEBUG_ON
+  for ( p=4; p<=4; p+=4 ){
+  # else
   for ( p=PFIRST; p<=PLAST; p+=PINC ){
+  #endif
     m = ( M == -1 ? p : M );
     n = ( N == -1 ? p : N );
     k = ( K == -1 ? p : K );
@@ -77,6 +81,43 @@ int main()
       else
 	dtime_best = ( dtime < dtime_best ? dtime : dtime_best );
     }
+
+    # if DEBUG_ON
+    printf("A\n");
+    for (int i = 0; i < 4; i++) {
+      for (int j = 0; j < 4; j++) {
+        printf("%f, ", *(a+i*lda+j));
+      }
+      printf("\n");
+    }
+
+    printf("B\n");
+
+    for (int i = 0; i < 4; i++) {
+      for (int j = 0; j < 4; j++) {
+        printf("%f, ", *(b+i*ldb+j));
+      }
+      printf("\n");
+    }
+
+    printf("cref\n");
+
+    for (int i = 0; i < 4; i++) {
+      for (int j = 0; j < 4; j++) {
+        printf("%f, ", *(cref+i*lda+j));
+      }
+      printf("\n");
+    }
+
+    printf("C\n");
+
+    for (int i = 0; i < 4; i++) {
+      for (int j = 0; j < 4; j++) {
+        printf("%f, ", *(c+i*ldc+j));
+      }
+      printf("\n");
+    }
+    # endif
 
     diff = compare_matrices( m, n, c, ldc, cref, ldc );
 

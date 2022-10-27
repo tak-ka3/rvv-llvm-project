@@ -1,3 +1,5 @@
+# OpenBLAS Project
+
 # https://msyksphinz.hatenablog.com/entry/2022/05/30/040000 でRISC-V Vector Extensionを試す
 
 OLD := MMult0
@@ -15,6 +17,7 @@ ASMS = $(SRCS:.c=.S)
 ELFS = $(SRCS:.c=.elf)
 TEST_OBJS := test_MMult.o
 UTIL := copy_matrix.o compare_matrices.o random_matrix.o dclock.o REF_MMult.o print_matrix.o
+LOG = ouput.log
 
 %.o: %.c
 	$(clang-14) -c $< -o $@ -menable-experimental-extensions -march=rv64gcv -target riscv64 -O3 -mllvm --riscv-v-vector-bits-min=256
@@ -60,4 +63,4 @@ gcc-spike: gcc gcc-asm
 
 
 clean: 
-	rm -f $(OBJS) $(ASMS) $(ELFS) $(UTIL) $(TEST_OBJS)
+	rm -f $(OBJS) $(ASMS) $(ELFS) $(UTIL) $(TEST_OBJS) $(LOG)
