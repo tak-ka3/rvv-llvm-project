@@ -1,0 +1,3 @@
+[submodule "blislab"]
+	path = blislab
+	url = https://gitee.com/xianyi/blislab.git
