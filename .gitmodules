@@ -1,6 +1,6 @@
 [submodule "blislab"]
 	path = blislab
-	url = https://gitee.com/xianyi/blislab.git
+	url = git@github.com:tak-ka3/blislab.git
 [submodule "OpenBLAS"]
 	path = OpenBLAS
 	url = git@github.com:tak-ka3/OpenBLAS.git
