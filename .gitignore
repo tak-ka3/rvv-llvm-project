@@ -73,3 +73,10 @@ pythonenv*
 
 /test/a.out
 /riscv-isa-sim
+/Xuantie-900-gcc-linux-5.10.4-glibc-x86_64-V2.6.1
+/bin
+/lib
+/libexec
+/share
+/include
+/soccfg
