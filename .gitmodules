@@ -4,3 +4,4 @@
 [submodule "OpenBLAS"]
 	path = OpenBLAS
 	url = git@github.com:tak-ka3/OpenBLAS.git
+	branch = develop
