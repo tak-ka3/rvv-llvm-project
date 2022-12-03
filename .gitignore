@@ -80,3 +80,7 @@ pythonenv*
 /share
 /include
 /soccfg
+/Fedora-Minimal-Rawhide-20200108.n.0-fw_payload-uboot-qemu-virt-smode.elf
+/Fedora-Minimal-Rawhide-20200108.n.0-sda.raw
+/qemu-7.2.0-rc2.tar.xz
+/qemu-7.2.0-rc2
